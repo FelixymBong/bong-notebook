@@ -1,0 +1,46 @@
+site_name: 我的个人笔记本
+site_description: 记录技术、生活与思考
+
+# 使用超赞的 Material 主题
+theme:
+  name: material
+  language: zh  # 变成中文界面
+  palette:
+    # 夜间模式自动切换
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗黑模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到明亮模式
+  features:
+    - navigation.tabs      # 顶部标签栏导航
+    - navigation.tracking  # 滚动时自动定位目录
+    - search.suggest       # 搜索建议
+    - search.highlight     # 搜索关键词高亮
+
+# 导航栏结构（支持多级目录）
+nav:
+  - 🏠 首页: index.md
+  - 💻 技术笔记:
+      - Python基础: tech/python.md
+      - 前端开发: tech/frontend.md
+  - ✍️ 随笔生活:
+      - 2026年度计划: life/2026-plan.md
+
+# 强大的 Markdown 扩展（支持代码高亮、复选框等）
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
